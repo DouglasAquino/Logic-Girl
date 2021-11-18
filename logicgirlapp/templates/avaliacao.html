@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Girl - Avaliação</title>
+    <script src="https://kit.fontawesome.com/5b266e7995.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'estilos/estilos.css' %}">
+    <link rel="stylesheet" href="{% static 'estilos/avaliacao.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="{% url 'home' %}"><img class="logo" src="{% static 'imagens/logo.png' %}"></a>
+        <div class="menu">
+            <a class="btn-menu" href="{% url 'home' %}">Sobre</a>
+            <a class="btn-menu" href="{% url 'download' %}">Download</a>
+            <a class="btn-menu sel" href="{% url 'avaliacao' %}">Avaliação</a>
+            <a class="btn-menu" href="{% url 'equipe' %}">Equipe</a>
+            <a class="btn-menu" href="{% url 'publicacoes' %}">Publicações</a>
+            {% if logado %}
+                <a class="btn-menu" href="#">Escrever</a>
+            {% endif %}
+        </div>
+    </nav>
+    <div class="banner-aval">
+        <h3>Queremos ouvir você! Sua opinião é muito importante para nós.</h3>
+    </div>
+    <div class="corpo">
+        <div class="versoes">
+            <div class="versao">
+                <div class="titulo">Sugestões ou Críticas</div>
+                <div class="linha"></div>
+                <div class="descricao-versao">
+                    Para a validação do Logic Girl, foi disponibilizado um site contendo informações sobre o jogo, a opção para download do jogo e um link para o formulário de avaliação e feedbacks. O site foi divulgado nas redes sociais e os interessados puderam ler sobre o projeto, testar o aplicativo e contribuir com sua avaliação e feedback. O questionário foi formulado com questões para identificação do público, para avaliar a interface do jogo, a aprendizagem dos conceitos de programação, a aceitação da proposta do jogo e um espaço para sugestões e melhorias.
+                </div>
+                <a class="btn-avaliar" href="#">AVALIAR</a>
+            </div>
+        </div>
+        <div class="img-corpo">
+            <img class="img-download" src="{% static 'imagens/samantha.png' %}">
+        </div>
+    </div>
+
+    <div class="rodape">
+        <div class="contato-rodape">
+            <h2>Contato</h2>
+            <h5><b>E-mail:</b> logicgirl7@gmail.com</h5>
+            <div class="redes-sociais">
+                <a class="rede-social" href="https://instagram.com/logic__girl_"><i class="fab fa-instagram"></i></a>
+                <a class="rede-social" href="https://instagram.com/logic__girl_"><i class="fab fa-twitter"></i></a>
+                <a class="rede-social" href="https://instagram.com/logic__girl_"><i class="fab fa-facebook-square"></i></a>
+            </div>
+        </div>
+        <img class="logo-rodape" src="{% static 'imagens/logo.png' %}">
+    </div>
+    <nav class="navbottom">
+        Copyright © 2019 - DaNimeS coorporation
+    </nav>
+</body>
+</html>

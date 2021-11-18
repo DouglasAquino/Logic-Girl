@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Girl - download</title>
+    <script src="https://kit.fontawesome.com/5b266e7995.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'estilos/estilos.css' %}">
+    <link rel="stylesheet" href="{% static 'estilos/download.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="{% url 'home' %}"><img class="logo" src="{% static 'imagens/logo.png' %}"></a>
+        <div class="menu">
+            <a class="btn-menu" href="{% url 'home' %}">Sobre</a>
+            <a class="btn-menu sel" href="{% url 'download' %}">Download</a>
+            <a class="btn-menu" href="{% url 'avaliacao' %}">Avaliação</a>
+            <a class="btn-menu" href="{% url 'equipe' %}">Equipe</a>
+            <a class="btn-menu" href="{% url 'publicacoes' %}">Publicações</a>
+            {% if logado %}
+                <a class="btn-menu" href="#">Escrever</a>
+            {% endif %}
+        </div>
+    </nav>
+    <div class="topo-down">
+        <h3>Versões Disponiveis</h3>
+        <h4>Android</h4>
+    </div>
+    <div class="corpo">
+        <div class="versoes">
+            <div class="versao">
+                <div class="nome-versao">Logic Girl - Beta - 1.0.5</div>
+                <div class="linha-down"></div>
+                <div class="descricao-versao">
+                    Atualização para todos os modelos de celulares: reponsivo e conserto de bugs da personagem
+                </div>
+            </div>
+            <div class="versao">
+                <div class="nome-versao">Logic Girl - Beta - 1.0.4</div>
+                <div class="linha-down"></div>
+                <div class="descricao-versao">
+                    Atualização para todos os modelos de celulares: reponsivo e conserto de bugs da personagem
+                </div>
+            </div>
+            <div class="versao">
+                <div class="nome-versao">Logic Girl - Beta - 1.0.2</div>
+                <div class="linha-down"></div>
+                <div class="descricao-versao">
+                    Atualização para todos os modelos de celulares: reponsivo e conserto de bugs da personagem
+                </div>
+            </div>
+        </div>
+        <div class="img-corpo">
+            <img class="img-download" src="{% static 'imagens/samantha.png' %}">
+        </div>
+    </div>
+
+    <div class="rodape">
+        <div class="contato-rodape">
+            <h2>Contato</h2>
+            <h5><b>E-mail:</b> logicgirl7@gmail.com</h5>
+            <div class="redes-sociais">
+                <a class="rede-social" href="https://instagram.com/logic__girl_"><i class="fab fa-instagram"></i></a>
+                <a class="rede-social" href="https://instagram.com/logic__girl_"><i class="fab fa-twitter"></i></a>
+                <a class="rede-social" href="https://instagram.com/logic__girl_"><i class="fab fa-facebook-square"></i></a>
+            </div>
+        </div>
+        <img class="logo-rodape" src="{% static 'imagens/logo.png' %}">
+    </div>
+    <nav class="navbottom">
+        Copyright © 2019 - DaNimeS coorporation
+    </nav>
+</body>
+</html>

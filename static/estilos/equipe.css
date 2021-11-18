@@ -1,0 +1,80 @@
+a{
+    color: #263238;
+;
+}
+
+.quem-somos{
+    width: 100%;
+    height: 250px;
+    border-bottom: 5px solid #25B80A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.img-quem-somos{
+    width: 150px;
+}
+
+.devs{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 70%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-secao{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.usuarios{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.usuario{
+    min-width: 150px;
+    max-width: 180px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-user{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid #25B80A;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.cargos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.cargo-user{
+    background-color: #25B80A;
+    color: white;
+    font-weight: bold;
+    padding: 2px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.rede-user{
+    font-size: 20px;
+}
+.rede-user:hover{
+    color: #25B80A;
+}

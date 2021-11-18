@@ -1,0 +1,90 @@
+a{
+    color: black;
+}
+
+.banner-aval{
+    margin-top: 50px;
+    width: 100%;
+    height: 150px;
+    background-color: #25B80A;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.banner-aval h3{
+    width: 80%;
+    text-align: center;
+}
+
+.corpo{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.img-corpo{
+    min-width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-download{
+    margin: 0 auto;
+    max-width: 300px;
+}
+
+.versoes{
+    width: 70%;
+}
+
+.versao{
+    width: 100%;   
+    margin-top: 50px; 
+    margin-bottom: 50px; 
+}
+
+.titulo{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.linha{
+    width: 40%;
+    background-color: #25B80A;
+    height: 2px;
+    margin-top: 3px;
+    margin-bottom: 15px;
+}
+
+.btn-avaliar{
+    align-self: flex-start;
+    cursor: pointer;
+    width: 150px;
+    height: 30px;
+    margin-top: 20px;
+    background-color: white;
+    border: 2px solid #25B80A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+    font-size: 15px;
+}
+
+.btn-avaliar:hover{
+    background-color: #25B80A;
+    color: white;
+}

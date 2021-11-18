@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicações</title>
+    <script src="https://kit.fontawesome.com/5b266e7995.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'estilos/estilos.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="{% url 'home' %}"><img class="logo" src="{% static 'imagens/logo.png' %}"></a>
+        <div class="menu">
+            <a class="btn-menu" href="{% url 'home' %}">Sobre</a>
+            <a class="btn-menu" href="{% url 'download' %}">Download</a>
+            <a class="btn-menu" href="{% url 'avaliacao' %}">Avaliação</a>
+            <a class="btn-menu" href="{% url 'equipe' %}">Equipe</a>
+            <a class="btn-menu sel" href="{% url 'publicacoes' %}">Publicações</a>
+            {% if logado %}
+                <a class="btn-menu" href="#">Escrever</a>
+            {% endif %}
+        </div>
+    </nav>
+    <div class="publicacoes">
+        <div class="pubs-top">
+            <h3 class="pubs-titulo">Publicações</h3>
+            <div class="linha"></div>
+        </div>
+        <div class="lista-publicacoes">
+            {% for p in publicacoes %}
+                <div class="card-publicacao">
+                    <img class="card-post-img" src="{{p.capa}}">
+                    <h3 class="card-post-titulo">{{p.titulo}}</h3>
+                    <h4 class="card-post-autor"><i class="fas fa-user"> {{p.autor}}</i></h4>
+                    <h4 class="card-post-data"><i class="far fa-clock"> {{p.data_publicacao}}</i></h4>
+                    <a class="btn-saiba-mais" href="{% url 'publicacao' p.id %}">SAIBA MAIS</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="rodape">
+        <div class="contato-rodape">
+            <h2>Contato</h2>
+            <h5><b>E-mail:</b> logicgirl7@gmail.com</h5>
+            <div class="redes-sociais">
+                <a class="rede-social" href="https://instagram.com/logic__girl_"><i class="fab fa-instagram"></i></a>
+                <a class="rede-social" href="https://instagram.com/logic__girl_"><i class="fab fa-twitter"></i></a>
+                <a class="rede-social" href="https://instagram.com/logic__girl_"><i class="fab fa-facebook-square"></i></a>
+            </div>
+        </div>
+        <img class="logo-rodape" src="{% static 'imagens/logo.png' %}">
+    </div>
+    <nav class="navbottom">
+        Copyright © 2019 - DaNimeS coorporation
+    </nav>
+</body>
+</html>

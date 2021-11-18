@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{publicacao.titulo}}</title>
+    <script src="https://kit.fontawesome.com/5b266e7995.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'estilos/estilos.css' %}">
+    <link rel="stylesheet" href="{% static 'estilos/equipe.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="{% url 'home' %}"><img class="logo" src="{% static 'imagens/logo.png' %}"></a>
+        <div class="menu">
+            <a class="btn-menu" href="{% url 'home' %}">Sobre</a>
+            <a class="btn-menu" href="{% url 'download' %}">Download</a>
+            <a class="btn-menu" href="{% url 'avaliacao' %}">Avaliação</a>
+            <a class="btn-menu" href="{% url 'equipe' %}">Equipe</a>
+            <a class="btn-menu sel" href="{% url 'publicacoes' %}">Publicações</a>
+            {% if logado %}
+                <a class="btn-menu" href="#">Escrever</a>
+            {% endif %}
+        </div>
+    </nav>
+    <div class="publicacoes">
+        {% if publicacao.capa %}
+            <img class="pub-capa-img" src="{{publicacao.capa}}">
+        {% endif %}
+        <div class="pubs-top">
+            <h3 class="pubs-titulo">{{publicacao.titulo}}</h3>
+            <div class="linha"></div>
+        </div>
+        <div class="pub-corpo-text">
+            {{publicacao.corpo}}
+        </div>
+        {% if publicacao.secao1 %}
+            <div class="pub-secao1">
+                <div class="img-secao1">
+                    <img class="img-pub-secao1" src="{{publicacao.capa_secao1}}">
+                </div>
+                <div class="corpo-secao1">
+                    <div class="pubs-top">
+                        <h3 class="pubs-subtitulo">{{publicacao.titulo_secao1}}</h3>
+                        <div class="linha"></div>
+                    </div>
+                    <div class="pub-corpo-text">
+                        {{publicacao.secao1}}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+    {% if publicacao.secao2 %}
+        <div class="pub-secao2">
+            <div class="secao2-corpo">
+                <div class="corpo-secao2">
+                    <div class="pubs-top">
+                        <h3 class="pubs-subtitulo">{{publicacao.titulo_secao2}}</h3>
+                        <div class="linha black"></div>
+                    </div>
+                    <div class="pub-corpo-text">
+                        {{publicacao.secao2}}
+                    </div>
+                </div>
+                <div class="img-secao2">
+                    <img class="img-pub-secao2" src="{{publicacao.capa_secao2}}">
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    {% if publicacao.referencias %}
+    <div class="pub-referencias">
+        <div class="pubs-top-ref">
+            <h3 class="pubs-subtitulo">REFERÊNCIAS</h3>
+            <div class="linha"></div>
+        </div>
+        <div class="pub-corpo-text">
+            {{publicacao.referencias}}
+        </div>
+    </div>
+    {% endif %}
+    <div class="pub-autor">
+        <img class="img-user" src="{{publicacao.autor.perfil}}">
+        <div class="autor-info">
+            <h3 class="nome-user">{{publicacao.autor.nome}}</h3>
+            <div class="cargos-autor">
+                {% for cargo in publicacao.autor.cargos.all %}
+                    <div class="cargo-user">{{cargo.tipo}}</div>
+                {% endfor %}
+            </div>
+            <div class="redes">
+                {% for rs in publicacao.autor.redes.all %}
+                    <a class="rede-user" href="{{rs.link}}"><i class="{{rs.tipo}}"></i></a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="rodape">
+        <div class="contato-rodape">
+            <h2>Contato</h2>
+            <h5><b>E-mail:</b> logicgirl7@gmail.com</h5>
+            <div class="redes-sociais">
+                <a class="rede-social" href="https://instagram.com/logic__girl_"><i class="fab fa-instagram"></i></a>
+                <a class="rede-social" href="https://instagram.com/logic__girl_"><i class="fab fa-twitter"></i></a>
+                <a class="rede-social" href="https://instagram.com/logic__girl_"><i class="fab fa-facebook-square"></i></a>
+            </div>
+        </div>
+        <img class="logo-rodape" src="{% static 'imagens/logo.png' %}">
+    </div>
+    <nav class="navbottom">
+        Copyright © 2019 - DaNimeS coorporation
+    </nav>
+</body>
+</html>
