@@ -16,7 +16,7 @@
         <div class="menu">
             <a class="btn-menu" href="{% url 'home' %}">Sobre</a>
             <a class="btn-menu" href="{% url 'download' %}">Download</a>
-            <a class="btn-menu" href="{% url 'avaliacao' %}">Avaliação</a>
+            <a class="btn-menu " href="{% url 'avaliacao' %}">Avaliação</a>
             <a class="btn-menu sel" href="{% url 'equipe' %}">Equipe</a>
             <a class="btn-menu" href="{% url 'publicacoes' %}">Publicações</a>
             {% if logado %}
@@ -26,6 +26,7 @@
                 <a class="btn-menu" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i></a>
             {% endif %}
         </div>
+        <div class="btn-menu-mobile" hidden><i class="fas fa-bars"></i></div>
     </nav>
     <div class="quem-somos">
         <h3 class="texto-quem">Quem </h3>
@@ -96,5 +97,6 @@
             </div>
         </div>
     </nav>
+    <script type="text/javascript" src="{% static 'javascript/navbar.controller.js' %}"></script>
 </body>
 </html>

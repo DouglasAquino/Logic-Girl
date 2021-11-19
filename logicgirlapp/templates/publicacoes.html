@@ -25,6 +25,7 @@
                 <a class="btn-menu" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i></a>
             {% endif %}
         </div>
+        <div class="btn-menu-mobile" hidden><i class="fas fa-bars"></i></div>
     </nav>
     <div class="publicacoes">
         <div class="pubs-top">
@@ -59,5 +60,6 @@
             </div>
         </div>
     </nav>
+    <script type="text/javascript" src="{% static 'javascript/navbar.controller.js' %}"></script>
 </body>
 </html>

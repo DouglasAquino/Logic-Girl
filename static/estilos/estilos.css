@@ -37,9 +37,11 @@ body{
 
 .menu{
     width: 50%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    transition: 1s;
 }
 
 .btn-menu{
@@ -49,6 +51,10 @@ body{
 
 .btn-menu:hover{
     color: #25B80A;
+}
+
+.btn-menu-mobile{
+    z-index: 3;
 }
 
 .opcoes{
