@@ -1,4 +1,5 @@
 import os
+import django_heroku
 from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-4u_fzwy3wm)n+3)j%&s2+gb+*x%3rxdkrr)h&$y^-15r!s93)m'
@@ -71,3 +72,4 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL='home'
 LOGOUT_REDIRECT_URL='home'
+django_heroku.settings(locals())

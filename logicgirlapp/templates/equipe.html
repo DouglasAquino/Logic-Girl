@@ -41,7 +41,7 @@
         <div class="usuarios">
             {% for user in devs %}
                 <div class="usuario">
-                    <img class="img-user" src="{% static user.perfil %}">
+                    <img class="img-user" src="{{user.perfil.url}}">
                     <div class="cargos">
                         {% for cargo in user.cargos.all %}
                             <div class="cargo-user">{{cargo.tipo}}</div>
@@ -65,7 +65,7 @@
         <div class="usuarios">
             {% for user in autores %}
                 <div class="usuario">
-                    <img class="img-user" src="{% static user.perfil %}">
+                    <img class="img-user" src="{{user.perfil.url}}">
                     <div class="cargos">
                         {% for cargo in user.cargos.all %}
                             <div class="cargo-user">{{cargo.tipo}}</div>

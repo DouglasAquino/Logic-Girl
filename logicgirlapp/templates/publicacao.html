@@ -33,8 +33,8 @@
             <img class="pub-capa-img" src="{{publicacao.capa}}">
         {% endif %}
         <div class="pubs-top">
-            <h3 class="pubs-titulo">{{publicacao.titulo}}</h3>
-            <div class="linha"></div>
+            <h3 class="pubs-titulo-post">{{publicacao.titulo}}</h3>
+            <div class="linha lin-pub"></div>
         </div>
         <div class="pub-corpo-text">
             {{publicacao.corpo}}
@@ -49,7 +49,7 @@
                 <div class="corpo-secao1">
                     <div class="pubs-top">
                         <h3 class="pubs-subtitulo">{{publicacao.titulo_secao1}}</h3>
-                        <div class="linha"></div>
+                        <div class="linha lin-pub"></div>
                     </div>
                     <div class="pub-corpo-text">
                         {{publicacao.secao1}}
@@ -64,7 +64,7 @@
                 <div class="corpo-secao2">
                     <div class="pubs-top">
                         <h3 class="pubs-subtitulo">{{publicacao.titulo_secao2}}</h3>
-                        <div class="linha black"></div>
+                        <div class="linha black lin-pub"></div>
                     </div>
                     <div class="pub-corpo-text">
                         {{publicacao.secao2}}
@@ -90,7 +90,7 @@
     </div>
     {% endif %}
     <div class="pub-autor">
-        <img class="img-user" src="{{publicacao.autor.perfil}}">
+        <img class="img-user" src="{{publicacao.autor.perfil.url}}">
         <div class="autor-info">
             <h3 class="nome-user">{{publicacao.autor.nome}}</h3>
             <div class="cargos-autor">
