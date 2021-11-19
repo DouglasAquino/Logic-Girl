@@ -5,7 +5,7 @@ a{
 .banner-aval{
     margin-top: 50px;
     width: 100%;
-    height: 150px;
+    height: 200px;
     background-color: #25B80A;
     color: white;
     display: flex;
@@ -14,9 +14,15 @@ a{
     font-size: 20px;
 }
 
-.banner-aval h3{
-    width: 80%;
+.msg-banner{
+    font-size: 35px;
+    width: 70%;
+    height: 100%;
+    display: flex;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
 
 .corpo{

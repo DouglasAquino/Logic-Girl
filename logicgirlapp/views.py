@@ -5,7 +5,7 @@ def home(request):
     logado = None
     if request.user.is_authenticated:
         logado = request.user
-    posts = Publicacao.objects.all()[:3]
+    posts = Publicacao.objects.filter(status="2")[:3]
     return render(request, "home.html", {"logado":logado,"posts":posts})
 
 def download(request):
@@ -45,4 +45,8 @@ def publicacao(request,id):
         return redirect("home")
     
 def publicacoes(request):
-    return render(request, 'publicacoes.html',{"publicacoes":Publicacao.objects.all()})
+    logado = None
+    if request.user.is_authenticated:
+        logado = request.user
+    todas = Publicacao.objects.filter(status = "2")
+    return render(request, 'publicacoes.html',{"logado":logado,"publicacoes":todas})

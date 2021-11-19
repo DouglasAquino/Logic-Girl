@@ -5,6 +5,7 @@
     margin: 0%;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
+    color: #30444E;
 }
 
 a{
@@ -69,11 +70,21 @@ body{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    width: 70%;
+    width: 100%;
     height: 100%;
     margin-top: 50px;
     margin-bottom: 50px;
-    background-color: rgb(218, 218, 218);
+    background-color: #e2e2e2;
+}
+
+.caixa-conteudo{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    height: 100%;
+    background-color: #e2e2e2;
 }
 
 .info{
@@ -91,14 +102,24 @@ body{
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
 }
 
 .info .titulo{
     font-size: 70px;
 }
+
 .info .descricao{
+    width: 90%;
+    height: 100%;
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.info-personagem .descricao{
     width: 90%;
     height: 30%;
     font-size: 15px;
@@ -115,7 +136,7 @@ body{
 }
 
 .img-sobre{
-    width: 250px;
+    width: 300px;
     height: 100%;
 }
 
@@ -235,11 +256,17 @@ body{
 }
 
 .contato-rodape{
+    color: white;
     min-width: 50%;
     height: 70px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.contato-rodape-text {
+    color: white;
 }
 
 .logo-rodape{
@@ -259,8 +286,11 @@ body{
 }
 
 .navbottom{
+    margin-top: 40px;
     width: 100%;
-    height: 30px;
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -268,22 +298,8 @@ body{
     background-color: #25B80A;
 }
 
-.sel{
-    color: #25B80A;
-}
-
-.publicacoes{
-    margin-top: 70px;
-    width: 80%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.lista-publicacoes{
-    width: 100%;
+.caixa-rodape{
+    width: 70%;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -291,23 +307,61 @@ body{
     justify-content: center;
 }
 
+.copyright{
+    color: white;
+    text-align: center;
+}
+
+.sel{
+    color: #25B80A;
+}
+
+.caixa-titulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.publicacoes{
+    margin-top: 70px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lista-publicacoes{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
 .linha{
-    align-self: flex-start;
     width: 30%;
     height: 2px;
     background-color: #25B80A;
 }
 .pubs-titulo{
-    width: 100%;
+    width: 30%;
     font-size: 35px;
 }
 .pubs-subtitulo{
-    width: 100%;
+    width: 50%;
     font-size: 25px;
 }
 
 .pubs-top{
     width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 20px;
 }
 .pubs-top-ref{
@@ -442,4 +496,66 @@ body{
     display: flex;
     align-items: center;
     justify-content: flex-start;
+}
+
+.bg{
+    background-color: #22b908;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.img-login{
+    position: absolute;
+    top: 10%;
+    left: -5%;
+    width: 70%;
+}
+
+.form-login{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-50%,-50%);
+    width: 30%;
+    height: 50%;
+    background-color: white;
+    border: 2px solid #25B80A;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="submit"]{
+    cursor: pointer;
+    background-color: #25B80A;
+    width: 100%;
+    border: none;
+    padding: 3px;
+    color: white;
+}
+input[type="submit"]:hover{
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.titulo-login{
+    justify-self: flex-start;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+label{
+    width: 100%;
+}
+
+input{
+    width: 100%;
+    height: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #30444E;
 }

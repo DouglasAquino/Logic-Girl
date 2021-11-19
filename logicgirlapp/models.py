@@ -46,6 +46,8 @@ class Publicacao(models.Model):
     capa_secao2 = models.CharField("Imagem da Seção 2",max_length=500,null=True,blank=True)
     data_publicacao = models.DateField("Data de Publicação",null=True,blank=True)
     referencias = models.TextField("Referências", max_length=15000,null=True,blank=True)
+    tipos_status = (("0","editando"),("1","revisão"),("2","publicado"))
+    status = models.CharField("Status da Publicação",max_length=20,choices=tipos_status, default=tipos_status[0][1])
 
     class Meta:
         verbose_name = "Publicação"

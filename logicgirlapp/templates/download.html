@@ -21,6 +21,9 @@
             <a class="btn-menu" href="{% url 'publicacoes' %}">Publicações</a>
             {% if logado %}
                 <a class="btn-menu" href="#">Escrever</a>
+                <a class="btn-menu" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i></a>
+            {% else %}
+                <a class="btn-menu" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i></a>
             {% endif %}
         </div>
     </nav>
@@ -57,20 +60,21 @@
         </div>
     </div>
 
-    <div class="rodape">
-        <div class="contato-rodape">
-            <h2>Contato</h2>
-            <h5><b>E-mail:</b> logicgirl7@gmail.com</h5>
-            <div class="redes-sociais">
-                <a class="rede-social" href="https://instagram.com/logic__girl_"><i class="fab fa-instagram"></i></a>
-                <a class="rede-social" href="https://instagram.com/logic__girl_"><i class="fab fa-twitter"></i></a>
-                <a class="rede-social" href="https://instagram.com/logic__girl_"><i class="fab fa-facebook-square"></i></a>
+    <nav class="navbottom">
+        <div class="caixa-rodape">
+            <div class="contato-rodape">
+                <h2 class="contato-rodape-text">Contato</h2>
+                <h5 class="contato-rodape-text"><b class="contato-rodape-text">E-mail:</b> logicgirl7@gmail.com</h5>
+                <div class="redes-sociais">
+                    <a class="rede-social" href="https://instagram.com/logic__girl_"><i class="contato-rodape-text fab fa-instagram"></i></a>
+                    <a class="rede-social" href="https://instagram.com/logic__girl_"><i class="contato-rodape-text fab fa-twitter"></i></a>
+                    <a class="rede-social" href="https://instagram.com/logic__girl_"><i class="contato-rodape-text fab fa-facebook-square"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                Copyright © 2019 - DaNimeS coorporation
             </div>
         </div>
-        <img class="logo-rodape" src="{% static 'imagens/logo.png' %}">
-    </div>
-    <nav class="navbottom">
-        Copyright © 2019 - DaNimeS coorporation
     </nav>
 </body>
 </html>

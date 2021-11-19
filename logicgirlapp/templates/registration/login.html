@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGC GIRL - LOGIN</title>
+    <link rel="stylesheet" href="{% static 'estilos/estilos.css' %}"
+</head>
+<body class="bg" style="background-image: url({% static 'imagens/login-bg.png' %});">
+    <img class="img-login" src="{% static 'imagens/capa.png' %}">
+    <form class="form-login" id="form-login" action="." method="POST">
+        <h3 class="titulo-login">LOGIN</h3>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="box-form">
+            <div ><input type="checkbox" id="conect"><label for="conect" id="#con"> Mantenha-me conectado</label></div>
+            <input type="submit" class="btn-enviar" value="ENTRAR">
+        </div>
+    </form>
+</body>
+</html>
