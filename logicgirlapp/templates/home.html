@@ -59,7 +59,7 @@
         <div class="cards">
             {% for post in posts %}
                 <div class="card-publicacao">
-                    <img class="card-post-img" src="{{post.capa}}">
+                    <img class="card-post-img" src="{{post.capa.url}}">
                     <h3 class="card-post-titulo">{{post.titulo}}</h3>
                     <h4 class="card-post-autor"><i class="fas fa-user"> {{post.autor}}</i></h4>
                     <h4 class="card-post-data"><i class="far fa-clock"> {{post.data_publicacao}}</i></h4>
