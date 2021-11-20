@@ -63,7 +63,7 @@
             <div class="secao2-corpo">
                 <div class="corpo-secao2">
                     <div class="pubs-top">
-                        <h3 class="pubs-subtitulo">{{publicacao.titulo_secao2.url}}</h3>
+                        <h3 class="pubs-subtitulo">{{publicacao.titulo_secao2}}</h3>
                         <div class="linha black lin-pub"></div>
                     </div>
                     <div class="pub-corpo-text">
@@ -72,7 +72,7 @@
                 </div>
                 {% if publicacao.capa_secao2 %}
                 <div class="img-secao2">
-                    <img class="img-pub-secao2" src="{{publicacao.capa_secao2}}">
+                    <img class="img-pub-secao2" src="{{publicacao.capa_secao2.url}}">
                 </div>
                 {% endif %}
             </div>
