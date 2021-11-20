@@ -20,7 +20,7 @@
             <a class="btn-menu" href="{% url 'equipe' %}">Equipe</a>
             <a class="btn-menu sel" href="{% url 'publicacoes' %}">Publicações</a>
             {% if logado %}
-                <a class="btn-menu" href="#">Escrever</a>
+                <a class="btn-menu" href="/admin/logicgirlapp/publicacao/add/">Escrever</a>
                 <a class="btn-menu" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i></a>
             {% else %}
                 <a class="btn-menu" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i></a>
@@ -30,7 +30,7 @@
     </nav>
     <div class="publicacoes">
         {% if publicacao.capa %}
-            <img class="pub-capa-img" src="{{publicacao.capa}}">
+            <img class="pub-capa-img" src="{{publicacao.capa.url}}">
         {% endif %}
         <div class="pubs-top">
             <h3 class="pubs-titulo-post">{{publicacao.titulo}}</h3>
@@ -43,7 +43,7 @@
             <div class="pub-secao1">
                 {% if publicacao.capa_secao1 %}
                 <div class="img-secao1">
-                    <img class="img-pub-secao1" src="{{publicacao.capa_secao1}}">
+                    <img class="img-pub-secao1" src="{{publicacao.capa_secao1.url}}">
                 </div>
                 {% endif %}
                 <div class="corpo-secao1">
@@ -63,7 +63,7 @@
             <div class="secao2-corpo">
                 <div class="corpo-secao2">
                     <div class="pubs-top">
-                        <h3 class="pubs-subtitulo">{{publicacao.titulo_secao2}}</h3>
+                        <h3 class="pubs-subtitulo">{{publicacao.titulo_secao2.url}}</h3>
                         <div class="linha black lin-pub"></div>
                     </div>
                     <div class="pub-corpo-text">
