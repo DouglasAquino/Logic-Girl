@@ -21,9 +21,15 @@
             <a class="btn-menu" href="{% url 'publicacoes' %}">Publicações</a>
             {% if logado %}
                 <a class="btn-menu" href="/admin/logicgirlapp/publicacao/add/">Escrever</a>
-                <a class="btn-menu" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i></a>
+                <a class="btn-menu" href="{% url 'logout' %}">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="alert-btn">Sair</span>
+                </a>
             {% else %}
-                <a class="btn-menu" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i></a>
+                <a class="btn-menu" href="{% url 'login' %}">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <span class="alert-btn">Entrar</span>
+                </a>
             {% endif %}
         </div>
         <div class="btn-menu-mobile" hidden><i class="fas fa-bars"></i></div>
