@@ -57,7 +57,7 @@ function abrirMenu(){
 function TamanhoTela(){
     largura = screen.width;
     let btn_menu = document.querySelector(".btn-menu-mobile");
-    if(largura < 750){
+    if(largura < 500){
         btn_menu.hidden = false;
         menuMobile();
     }else{
