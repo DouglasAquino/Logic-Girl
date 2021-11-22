@@ -9,8 +9,10 @@
     <script src="https://kit.fontawesome.com/5b266e7995.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'estilos/estilos.css' %}">
     <link rel="stylesheet" href="{% static 'estilos/equipe.css' %}">
+    <script type="text/javascript" src="{% static 'javascript/ajustetexto.js' %}"></script>
 </head>
 <body>
+    <div id="publicacao" hidden></div>
     <nav class="navbar">
         <a href="{% url 'home' %}"><img class="logo" src="{% static 'imagens/logo.png' %}"></a>
         <div class="menu">
@@ -127,7 +129,6 @@
             </div>
         </div>
     </nav>
-    <script type="text/javascript" src="{% static 'javascript/navbar.controller.js' %}"></script>
-    <script type="text/javascript" src="{% static 'javascript/ajustetexto.js' %}"></script>
+    <script type="text/javascript" src="{% static 'javascript/navbar.js' %}"></script>
 </body>
 </html>
