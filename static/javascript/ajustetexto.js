@@ -7,6 +7,7 @@ function ajustarTexto(elemento){
             let t = document.createElement("text");
             t.textContent = text;
             elemento.appendChild(t);
+            elemento.appendChild(document.createElement("br"));
         }else{
             let li = document.createElement("li");
             let b = document.createElement("b");
@@ -16,7 +17,6 @@ function ajustarTexto(elemento){
             lista.appendChild(document.createElement("br"));
             elemento.appendChild(lista);
         }
-        elemento.appendChild(document.createElement("br"));
     })
 }
 
