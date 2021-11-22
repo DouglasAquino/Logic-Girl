@@ -35,7 +35,7 @@
         <div class="lista-publicacoes">
             {% for p in publicacoes %}
                 <div class="card-publicacao">
-                    <img class="card-post-img" src="{{p.capa.url}}">
+                    <img class="card-post-img" src="{{p.capa}}">
                     <h3 class="card-post-titulo">{{p.titulo}}</h3>
                     <h4 class="card-post-autor"><i class="fas fa-user"> {{p.autor}}</i></h4>
                     <h4 class="card-post-data"><i class="far fa-clock"> {{p.data_publicacao}}</i></h4>

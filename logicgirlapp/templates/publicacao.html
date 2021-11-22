@@ -30,7 +30,7 @@
     </nav>
     <div class="publicacoes">
         {% if publicacao.capa %}
-            <img class="pub-capa-img" src="{{publicacao.capa.url}}">
+            <img class="pub-capa-img" src="{{publicacao.capa}}">
         {% endif %}
         <div class="pubs-top">
             <h3 class="pubs-titulo-post">{{publicacao.titulo}}</h3>
@@ -43,7 +43,7 @@
             <div class="pub-secao1">
                 {% if publicacao.capa_secao1 %}
                 <div class="img-secao1">
-                    <img class="img-pub-secao1" src="{{publicacao.capa_secao1.url}}">
+                    <img class="img-pub-secao1" src="{{publicacao.capa_secao1}}">
                 </div>
                 {% endif %}
                 <div class="corpo-secao1">
@@ -72,7 +72,7 @@
                 </div>
                 {% if publicacao.capa_secao2 %}
                 <div class="img-secao2">
-                    <img class="img-pub-secao2" src="{{publicacao.capa_secao2.url}}">
+                    <img class="img-pub-secao2" src="{{publicacao.capa_secao2}}">
                 </div>
                 {% endif %}
             </div>
@@ -90,7 +90,7 @@
     </div>
     {% endif %}
     <div class="pub-autor">
-        <img class="img-user" src="{{publicacao.autor.perfil.url}}">
+        <img class="img-user" src="{{publicacao.autor.perfil}}">
         <div class="autor-info">
             <h3 class="nome-user">{{publicacao.autor.nome}}</h3>
             <div class="cargos-autor">
