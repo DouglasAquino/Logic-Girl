@@ -150,6 +150,23 @@ body{
     height: 100%;
 }
 
+.alert-btn{
+    position: absolute;    
+    transition: 0.5s;
+    margin-left: 5px;
+    width: 0px;
+    height: 20px;
+    border-radius: 3px;
+    background-color: #30444E;
+    color: white;
+    text-align: center;
+}
+
+.btn-menu:hover > .alert-btn{
+    width: 45px;
+    font-size: 15px;
+}
+
 .btn-download{
     margin-top: 5px;
     background-color: #25B80A;
