@@ -49,6 +49,11 @@
     width: 100%;   
     margin-top: 50px; 
     margin-bottom: 50px; 
+    cursor: pointer;
+}
+
+.versao:hover{
+    border-bottom: 1px solid #25B80A;
 }
 
 .nome-versao{

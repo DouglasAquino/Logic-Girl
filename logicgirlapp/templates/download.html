@@ -9,6 +9,11 @@
     <script src="https://kit.fontawesome.com/5b266e7995.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'estilos/estilos.css' %}">
     <link rel="stylesheet" href="{% static 'estilos/download.css' %}">
+    <script type="text/javascript">
+        function Download(){
+            window.location.href = "/static/apks/logicGirl.apk"
+        }
+    </script>
 </head>
 <body>
     <nav class="navbar">
@@ -34,21 +39,21 @@
     </div>
     <div class="corpo">
         <div class="versoes">
-            <div class="versao">
+            <div class="versao" onclick="Download()">
                 <div class="nome-versao">Logic Girl - Beta - 1.0.5</div>
                 <div class="linha-down"></div>
                 <div class="descricao-versao">
                     Atualização para todos os modelos de celulares: reponsivo e conserto de bugs da personagem
                 </div>
             </div>
-            <div class="versao">
+            <div class="versao" onclick="Download()">
                 <div class="nome-versao">Logic Girl - Beta - 1.0.4</div>
                 <div class="linha-down"></div>
                 <div class="descricao-versao">
                     Atualização para todos os modelos de celulares: reponsivo e conserto de bugs da personagem
                 </div>
             </div>
-            <div class="versao">
+            <div class="versao" onclick="Download()">
                 <div class="nome-versao">Logic Girl - Beta - 1.0.2</div>
                 <div class="linha-down"></div>
                 <div class="descricao-versao">
